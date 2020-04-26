@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Abeilles: nos appiculteurs!
+{% endblock %}
+{% block monTitre %}Nos gentils appiculteurs
+{% endblock %}
+{% block body %}
+	<section class="container">
+		{% for beekeeper in beekeepers %}
+			<article class="my-5 border-top">
+				<div class="row my-2">
+					<div class="col-lg-6">
+						<h2>{{beekeeper.name}}</h2>
+						<p>{{beekeeper.region}}</p>
+						<h4>Son histoire:</h4>
+						<p>{{beekeeper.description}}</p>
+					</div>
+					<div class="col-lg-6">
+						<img class="img-fluid rounded" src="{{asset('images/appiculteur/' ~ beekeeper.image)}}" alt="photo de l'appiculteur de: {{beekeeper.name}}">
+					</div>
+				</div>
+				<hr>
+				<div class="row mb-4">
+					<div class="col-md-8">
+						<p>Vous avez le miel à la bouche, cliquez ci-contre</p>
+					</div>
+					<div class="col-md-4">
+						<a class="btn btn-lg btn-primary btn-block" href="#">venez goutez mes produits</a>
+					</div>
+				</div>
+				<hr>
+			</article>
+		{% endfor %}
+	</section>
+{% endblock %}

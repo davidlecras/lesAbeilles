@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les Abeilles: Inscription!
+{% endblock %}
+
+{% block monTitre %}Inscrivez-vous dans notre ruche!
+{% endblock %}
+
+{% block body %}
+	<div class="container my-4 text-center">
+		{{ form_start(form)}}
+		{{form_widget(form)}}
+		<div class="row container justify-content-between">
+			<input type="submit" value="S'inscrire" class=" col-6 btn btn-primary">
+			<a class="col-6 d-flex justify-content-center btn btn-warning" href="{{path('login')}}">Déjà membre?</a>
+		</div>
+		{{form_end(form)}}
+	</div>
+
+{% endblock %}
