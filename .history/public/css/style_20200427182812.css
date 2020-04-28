@@ -19,7 +19,7 @@ li {
 }
 
 .newProducts {
-  min-height: 95vh;
+  min-height: 90vh;
   background-color: #005065;
 }
 
@@ -71,7 +71,7 @@ li {
 
   .logoDark {
     height: 9vh;
-    width: 9vh;
+    width: 2em;
   }
 }
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
@@ -79,10 +79,6 @@ li {
   .imgCar {
     height: 30vh;
     width: 100%;
-  }
-  .logoDark {
-    height: 6vh;
-    width: 6vh;
   }
   .newProducts {
     display: none;
@@ -102,10 +98,7 @@ li {
     height: 30vh;
     width: 100%;
   }
-  .logoDark {
-    height: 4vh;
-    width: 4vh;
-  }
+
   .logoDarkFooter {
     display: none;
   }

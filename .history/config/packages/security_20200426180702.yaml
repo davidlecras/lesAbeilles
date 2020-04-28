@@ -27,11 +27,10 @@ security:
         path: logout
         target: home
 
-      remember_me:
-        secret: '%kernel.secret%'
-        lifetime: 604800 # 1 week in seconds
-        path: /
-
+remember_me:
+                secret:   '%kernel.secret%'
+                lifetime: 604800 # 1 week in seconds
+                path: /
       # activate different ways to authenticate
       # https://symfony.com/doc/current/security.html#firewalls-authentication
       # https://symfony.com/doc/current/security/impersonating_user.html

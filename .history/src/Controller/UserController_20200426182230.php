@@ -59,10 +59,12 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/myProfile", name="my_profile")
+     * @Route("/myProfile/{id}", name="my_profile")
      */
-    public function myProfile()
+    public function myProfile(User $user)
     {
-        return $this->render('user/myProfile.html.twig');
+        return $this->render('user/myProfile.html.twig', [
+            'user' => $user->getId()
+        ]);
     }
 }
